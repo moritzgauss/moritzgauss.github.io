@@ -1,0 +1,45 @@
+/* Allgemeines Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Cormorant", serif; /* Wählt eine elegantere Schrift für den Sand-Effekt */
+}
+
+/* Hintergrund-Container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/mori77z/beach/refs/heads/main/IMG_0700.GIF') no-repeat center center;
+    background-size: cover;
+}
+
+/* Text-Overlay mit Perspektive */
+.text-overlay {
+    position: absolute;
+    bottom: 40%; /* Näher am unteren Rand für einen realistischen Look */
+    width: 100%;
+    text-align: center;
+    transform: perspective(1000px) rotateX(33deg); /* Perspektivische Verzerrung */
+}
+
+#lyrics {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(194, 178, 128, 0.9); /* sandähnliche Farbe */
+    text-shadow: 
+        0px 1px 1px rgba(0, 0, 0, 0.5), /* leichte Schattierung */
+        2px 2px 2px rgba(0, 0, 0, 0.3); /* dunklerer Rand */
+    animation: fadeOut 1.5s linear infinite;
+    white-space: nowrap;
+}
+
+/* Animation für das Verschwinden */
+@keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    90% { opacity: 0; transform: scale(1.1); }
+    100% { opacity: 0; }
+}
