@@ -18,8 +18,8 @@ function updateLyrics() {
 }
 
 // Initialisiere den Textwechsel
-setInterval(updateLyrics, 1500);
+setInterval(updateLyrics, 2000);
 
 setTimeout(() => {
     window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
-  }, 7000);
+  }, 10000);
