@@ -1,10 +1,10 @@
 // Liste von Songtext-Ausschnitten
 const lyrics = [
-    "I want it that way",
-    "Hit me baby one more time",
-    "Hello from the other side",
-    "We will rock you",
-    "Cause you're amazing, just the way you are"
+    "Carry on, like flights,",
+    "I just carry on",
+    "With this pain inside of my chest",
+    "Got no choice but",
+    "To carry on"
 ];
 
 const lyricsElement = document.getElementById("lyrics");
@@ -22,4 +22,4 @@ setInterval(updateLyrics, 1500);
 
 setTimeout(() => {
     window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
-  }, 5000);
+  }, 7000);
