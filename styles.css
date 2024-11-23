@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    font-family: "Cormorant", serif; /* Wählt eine elegantere Schrift für den Sand-Effekt */
+    font-family: Helvetica; /* Wählt eine elegantere Schrift für den Sand-Effekt */
 }
 
 /* Hintergrund-Container */
@@ -20,9 +20,11 @@ body, html {
 .text-overlay {
     position: absolute;
     bottom: 40%; /* Näher am unteren Rand für einen realistischen Look */
-    width: 100%;
+    width: 100vw;
+  word-wrap: break-word; /* Alte Eigenschaft, funktioniert überall */
+  overflow-wrap: break-word; /* Moderne Eigenschaft */
     text-align: center;
-    transform: perspective(1000px) rotateX(33deg); /* Perspektivische Verzerrung */
+    transform: perspective(1400px) rotateX(42deg); /* Perspektivische Verzerrung */
 }
 
 #lyrics {
