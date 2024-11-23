@@ -21,8 +21,6 @@ body, html {
     position: absolute;
     bottom: 40%; /* Näher am unteren Rand für einen realistischen Look */
     width: 100vw;
-  word-wrap: break-word; /* Alte Eigenschaft, funktioniert überall */
-  overflow-wrap: break-word; /* Moderne Eigenschaft */
     text-align: center;
     transform: perspective(1400px) rotateX(42deg); /* Perspektivische Verzerrung */
 }
@@ -35,7 +33,8 @@ body, html {
         0px 1px 1px rgba(0, 0, 0, 0.5), /* leichte Schattierung */
         2px 2px 2px rgba(0, 0, 0, 0.3); /* dunklerer Rand */
     animation: fadeOut 1.5s linear infinite;
-    white-space: nowrap;
+  word-wrap: break-word; /* Alte Eigenschaft, funktioniert überall */
+  overflow-wrap: break-word; /* Moderne Eigenschaft */
 }
 
 /* Animation für das Verschwinden */
