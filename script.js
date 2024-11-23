@@ -1,10 +1,9 @@
 // Liste von Songtext-Ausschnitten
 const lyrics = [
-    "Carry on, like flights,",
-    "I just carry on",
-    "With this pain inside of my chest",
-    "Got no choice but",
-    "To carry on"
+    "The stars gonna fall every night",
+    "I see the stranger look in your eyes",
+    "I know that we've only just met",
+    "But I don't wanna see you go"
 ];
 
 const lyricsElement = document.getElementById("lyrics");
