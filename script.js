@@ -21,4 +21,4 @@ setInterval(updateLyrics, 1500);
 
 setTimeout(() => {
     window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
-  }, 8500);
+  }, 8000);
