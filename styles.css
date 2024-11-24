@@ -22,12 +22,12 @@ body, html {
     bottom: 40%; /* Näher am unteren Rand für einen realistischen Look */
     width: 100vw;
     text-align: center;
-    transform: perspective(1400px) rotateX(42deg); /* Perspektivische Verzerrung */
+    transform: perspective(1440px) rotateX(44deg); /* Perspektivische Verzerrung */
 }
 
 #lyrics {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgba(194, 178, 128, 0.9); /* sandähnliche Farbe */
     text-shadow: 
         0px 1px 1px rgba(0, 0, 0, 0.5), /* leichte Schattierung */
