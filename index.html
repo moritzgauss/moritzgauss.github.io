@@ -4,62 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waves on the Beach</title>
-  
-</head>
-<style>
-/* Allgemeines Styling */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    font-family: Helvetica; /* Wählt eine elegantere Schrift für den Sand-Effekt */
-}
-
-/* Hintergrund-Container */
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url('https://raw.githubusercontent.com/mori77z/beach/refs/heads/main/IMG_0700.GIF') no-repeat center center;
-    background-size: cover;
-}
-
-/* Text-Overlay mit Perspektive */
-.text-overlay {
-    position: absolute;
-    bottom: 40%; /* Näher am unteren Rand für einen realistischen Look */
-    width: 100vw;
-    text-align: center;
-    transform: perspective(1440px) rotateX(44deg); /* Perspektivische Verzerrung */
-}
-
-#lyrics {
-    display: inline-block;
-    font-size: 2.2rem;
-    color: rgba(194, 178, 128, 0.9); /* sandähnliche Farbe */
-    text-shadow: 
-        0px 1px 1px rgba(0, 0, 0, 0.5), /* leichte Schattierung */
-        2px 2px 2px rgba(0, 0, 0, 0.3); /* dunklerer Rand */
-    animation: fadeOut 1.5s linear infinite;
-  word-wrap: break-word; /* Alte Eigenschaft, funktioniert überall */
-  overflow-wrap: break-word; /* Moderne Eigenschaft */
-}
-
-/* Animation für das Verschwinden */
-@keyframes fadeOut {
-    0% { opacity: 1; transform: scale(1); }
-    90% { opacity: 0; transform: scale(1.1); }
-    100% { opacity: 0; }
-}
-
-@media (min-width: 700px) {
-
-#lyrics {
-    font-size: 3rem;
     
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Allgemeines Styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Bodoni Moda, Times New Roman, serif;
+        }
+
+        /* Hintergrund-Container */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/mori77z/beach/refs/heads/main/IMG_0700.GIF') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Text-Overlay mit Perspektive */
+        .text-overlay {
+            position: absolute;
+            bottom: 40%;
+            width: 100vw;
+            text-align: center;
+            transform: perspective(1440px) rotateX(44deg);
+        }
+
+        #lyrics {
+            display: inline-block;
+            font-size: 2.2rem;
+            color: rgba(194, 178, 128, 0.9);
+            text-shadow: 
+                0px 1px 1px rgba(0, 0, 0, 0.5),
+                2px 2px 2px rgba(0, 0, 0, 0.3);
+            animation: fadeOut 1.5s linear infinite;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Animation für das Verschwinden mit Unschärfe */
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: scale(1); filter: blur(0px); }
+            70% { filter: blur(0px); }
+            90% { opacity: 0.5; transform: scale(1.1); filter: blur(4px); }
+            100% { opacity: 0; transform: scale(1.1); filter: blur(6px); }
+        }
+
+        @media (min-width: 700px) {
+            #lyrics {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <div class="text-overlay">
@@ -67,32 +68,31 @@ body, html {
         </div>
     </div>
     <script>
-    
-    // Liste von Songtext-Ausschnitten
-const lyrics = [
-    "The stars gonna fall every night",
-    "I see the stranger look in your eyes",
-    "I know that we've only just met",
-    "But I don't wanna see you go"
-];
+        // Liste von Songtext-Ausschnitten
+        const lyrics = [
+            "The stars gonna fall every night",
+            "I see the stranger look in your eyes",
+            "I know that we've only just met",
+            "But I don't wanna see you go"
+        ];
 
-const lyricsElement = document.getElementById("lyrics");
+        const lyricsElement = document.getElementById("lyrics");
 
-let index = 0;
+        let index = 0;
 
-// Funktion, um den Text alle 1,5 Sekunden zu ändern
-function updateLyrics() {
-    lyricsElement.textContent = lyrics[index];
-    index = (index + 1) % lyrics.length; // Schleife durch die Texte
-}
+        // Funktion, um den Text alle 1,5 Sekunden zu ändern
+        function updateLyrics() {
+            lyricsElement.textContent = lyrics[index];
+            index = (index + 1) % lyrics.length; // Schleife durch die Texte
+        }
 
-// Initialisiere den Textwechsel
-setInterval(updateLyrics, 1500);
+        // Initialisiere den Textwechsel
+        setInterval(updateLyrics, 1500);
 
-setTimeout(() => {
-    window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
-  }, 7000);
-    
+        // Weiterleitung nach 7 Sekunden
+        setTimeout(() => {
+            window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
+        }, 7000);
     </script>
 </body>
 </html>
