@@ -70,10 +70,10 @@
     <script>
         // Liste von Songtext-Ausschnitten
         const lyrics = [
-            "The stars gonna fall every night",
-            "I see the stranger look in your eyes",
-            "I know that we've only just met",
-            "But I don't wanna see you go"
+            "Digital Concepts",
+            "Ui / ux Design",
+            "Object Creation",
+            "industrial Designer"
         ];
 
         const lyricsElement = document.getElementById("lyrics");
@@ -83,14 +83,14 @@
         // Funktion, um den Text alle 1,5 Sekunden zu ändern
         function updateLyrics() {
             lyricsElement.textContent = lyrics[index];
-            index = (index + 1) % lyrics.length; // Schleife durch die Texte
+            index = (index + 1.5) % lyrics.length; // Schleife durch die Texte
         }
 
 
         // Weiterleitung nach 7 Sekunden
         setTimeout(() => {
             window.location.href = "https://moritzgauss.com"; // Zielseite hier einfügen
-        }, 7000);
+        }, 8000);
     </script>
 </body>
 </html>
