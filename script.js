@@ -20,5 +20,5 @@ function updateLyrics() {
 setInterval(updateLyrics, 1500);
 
 setTimeout(() => {
-    window.location.href = "https://moritzgauss.com/about"; // Zielseite hier einfügen
+    window.location.href = "https://beach.mori77z.de/archive"; // Zielseite hier einfügen
   }, 7000);
